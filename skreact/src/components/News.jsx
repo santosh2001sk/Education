@@ -1,9 +1,21 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {FaAlignJustify,FaHome,FaBuffer,FaPhoneAlt,FaRegFileVideo,FaBookReader,FaMedapps} from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import './Style.css'
+
+const url = 'https://api.github.com/users';
 const News = () => {
   const[open ,setOpen] =useState(true);
+  const [users,setUsers]=useState([]);
+  const getusers=async()=>{
+    const response =await fetch(url);
+    const users =await response.json();
+    setUsers(users)
+  }
+   useEffect(()=>{
+     getusers() ;
+   },[]);
   return (
     <div>
     <nav className='bg-gray-200 border-b fixed top-0 left-0 w-full h-16 flex justify-between items-center z-10'>
@@ -22,9 +34,6 @@ const News = () => {
                   </Link>
         </button>
         {/* <CloseButton variant="red"/> */}
-
-       
-        
         </div>
         <div id='tuto' className='flex items-center p-3 gap-x-2'>
           <img
@@ -34,8 +43,7 @@ const News = () => {
           />
  <button className="aq" type="button">
             <Link to="/login">Login</Link></button>
-         
-         
+
           </div>
 
     </nav> <aside id="ali" className='overflow-hidden border-r h-full fixed top-0 left mt-10 px-5 pt-5'
@@ -84,21 +92,25 @@ const News = () => {
 
 
      </aside>
-        <section className='grid md:grid-cols-2 gap-4 mt-20 mx-5 justify-between items-center d-flex'
-        style={{
+        <section className='grid md:grid-cols-4 gap-4 mt-20 mx-5  d-flex' style={{
       backgroundColor:"aliceblue",
       marginLeft:open ? 200:60,
       transition:"0.2s"
            }}>
-            <div>sdfsdwa</div>
-            <div>sasdas</div>
-            <div>sasas</div>
-            <div>sdfsdwa</div>
-            <div>sasdas</div>
-            <div>sasas</div>
-            <div>sdfsdwa</div>
-            <div>sasdas</div>
-            <div>sasas</div>
+        <h2>github</h2>;
+   <ul className='users'>
+   {users.map((user)=>{
+    const {id,login,avatar_url,html_url}=user
+return <li key={id}>
+  <img src={avatar_url} alt={login} height={10}/>
+  <div className='h-6 flex-column'>
+    <h4>{login}</h4>
+    <a href={html_url}>profile</a>
+  </div>
+</li>
+
+   })}
+   </ul>
         </section>
     </div>
   )

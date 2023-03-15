@@ -6,6 +6,8 @@ import { useState } from 'react';
 import {FaAlignJustify,FaHome,FaBuffer,FaPhoneAlt,FaRegFileVideo,FaBookReader,FaMedapps} from "react-icons/fa";
 const Tut = () => {
   const[open ,setOpen] =useState(true);
+  const[open2 ,setOpen2] =useState(true);
+
   // const {page ,nbpages}=useGlobalContext();
   return (
     <>
@@ -100,13 +102,19 @@ const Tut = () => {
 
     {
       
-     <div >
+     <div  >
      
-     <iframe width="300" height="180" src="https://www.youtube.com/embed/OuBUUkQfBYM"   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+     <iframe className='z-10' style={{
+
+height: open2 ? 180:400,
+width: open2 ? 300:400,
+marginRight:open2 ? 0:400,
+transition:"0.2s"
+}}  width="300" height="180" src="https://www.youtube.com/embed/OuBUUkQfBYM"   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
       </iframe>
       <div className='flex gap-x-2'>
-        <img alt='tk' src='hola.png' className='rounded-full w-10 h-10 m-2 border bg-red-200'/>
+       <button type="button" onClick={()=>setOpen2(!open2)} formTarget="blank"> <img alt='tk' src='hola.png' className='rounded-full w-10 h-10 m-2 border bg-red-200'/></button>
       
         <div>
           <h5 className='text-sm font-semibold'>
@@ -127,7 +135,7 @@ Learn Java programming from basics or you can say ZERO to HERO :D
       
     }
     <div >
-      <img alt='yk' src={'images/1.webp'} className='rounded-lg'/>
+      <img alt='yk' src={'images/1.webp'} className='rounded-lg '/>
       
       <div className='flex gap-x-2'>
         <img alt='tk' src='hola.png' className='rounded-full w-10 h-10 m-2 border bg-red-200'/>

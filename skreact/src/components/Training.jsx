@@ -88,7 +88,7 @@ const Training = () => {
 
 
      </aside>
-    <section className='grid md:grid-cols-4 gap-4 mt-20 mx-5 justify-between items-center d-flex' style={{
+    <section className='grid md:grid-cols-4 gap-4 mt-20 mx-5 justify-between items-center ' style={{
       backgroundColor:"aliceblue",
       marginLeft:open ? 200:60,
       transition:"0.2s"

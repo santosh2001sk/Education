@@ -8,7 +8,9 @@ import {
   FaRegFileVideo,
   FaBookReader,
   FaMedapps,
+  FaStar
 } from "react-icons/fa";
+import { FcDatabase } from "react-icons/fc";
 // import Ceo from "./images/ceo.jpg";
 // import Takla from "./images/cfo.jpg";
 import "./Style.css";
@@ -252,10 +254,16 @@ const HOME = (props, { Children }) => {
               TRAINING
             </button>
           </Link>
-          <Link to="/news">
+          <Link to="/notify">
             <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
               <FaMedapps className="text-slate-700" />
               NOTIFICATION
+            </button>
+          </Link>
+          <Link to="/review">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaStar className="text-slate-700" />
+              REVIEW
             </button>
           </Link>
           <hr />
@@ -763,6 +771,10 @@ const HOME = (props, { Children }) => {
                     height={200}
                     animation-name="exam"
                   />
+                  <div style={{
+                  marginTop: open ? 30 : 0,
+                  transition: "0.2s",
+                }}>
                   <div
                     style={{
                       float: "left",
@@ -793,6 +805,7 @@ const HOME = (props, { Children }) => {
                       <p>Email:adc@gmail.com</p>
                       <a href="https://duo.google.com">Telephone:9078740841</a>
                     </contact>
+                  </div>
                   </div>
                 </div>
                 <div className="divr1">
