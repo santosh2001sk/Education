@@ -1,6 +1,16 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import {FaAlignJustify,FaHome,FaBuffer,FaPhoneAlt,FaRegFileVideo,FaBookReader,FaMedapps} from "react-icons/fa";
+import {
+  FaAlignJustify,
+  FaSistrix,
+  FaHome,
+  FaBuffer,
+  FaPhoneAlt,
+  FaRegFileVideo,
+  FaBookReader,
+  FaMedapps,
+  FaStar
+} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import './Style.css'
 
@@ -46,52 +56,78 @@ const News = () => {
 
           </div>
 
-    </nav> <aside id="ali" className='overflow-hidden border-r h-full fixed top-0 left mt-10 px-5 pt-5'
-     style={{
+    </nav>  <aside
+          id="ali"
+          className="overflow-hidden border-r h-full fixed top-0 left mt-20 px-5 pt-5"
+          style={{
+            // backgroundColor: nbg,
+            width: open ? 200 : 60,
+            transition: "0.2s",
+          }}
+        >
+          <a href="#sco">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaHome className="text-slate-700" />
+              HOME
+            </button>
+          </a>
 
-      width: open ? 200:60,
-      transition:"0.2s"
-     }}
-     >
-       
-        <Link to="/"><button  className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-           <FaHome className="text-slate-700"/>HOME
-         </button></Link> 
-        
-      <a href="#c4">  <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-         <FaBuffer  className="text-slate-700"/>ABOUT
-         </button></a>
+          <a href="#c4">
+            {" "}
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaBuffer className="text-slate-700" />
+              ABOUT
+            </button>
+          </a>
 
-        <a href="#c5"> <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-         <FaPhoneAlt  className="text-slate-700"/>CONTACT
-         </button></a>
-        <Link to="/tut">
-         <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-         <FaRegFileVideo  className="text-slate-700"/>TUTORIALS
-         </button></Link>
-         <Link to="/training">
-         <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-         <FaBookReader className="text-slate-700"/>TRAINING
-         </button></Link>
-         <Link to="/news">
-         <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
-         <FaMedapps className="text-slate-700"/>NOTIFICATION
-         </button></Link>
-         <hr/>
-         
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
+          <a href="#c5">
+            {" "}
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaPhoneAlt className="text-slate-700" />
+              CONTACT
+            </button>
+          </a>
+          <Link to="/tut">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaRegFileVideo className="text-slate-700" />
+              TUTORIALS
+            </button>
+          </Link>
+          <Link to="/training">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaBookReader className="text-slate-700" />
+              TRAINING
+            </button>
+          </Link>
+          <Link to="/notify">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaMedapps className="text-slate-700" />
+              NOTIFICATION
+            </button>
+          </Link>
+          <Link to="/review">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaStar className="text-slate-700" />
+              REVIEW
+            </button>
+          </Link>
+          <hr />
 
-         <button>         <img src="./images/playstore.png" alt="ty" ></img>
-</button>
- <button>         <img src="./images/apple.png" alt="ty" ></img>
-</button>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
 
-
-     </aside>
+          <button>
+            {" "}
+            <img src="./images/playstore.png" alt="ty"></img>
+          </button>
+          <button>
+            {" "}
+            <img src="./images/apple.png" alt="ty"></img>
+          </button>
+        </aside>
         <section className='grid md:grid-cols-4 gap-4 mt-20 mx-5  d-flex' style={{
       backgroundColor:"aliceblue",
       marginLeft:open ? 200:60,

@@ -2,6 +2,7 @@ import React from 'react';
 import "./Style1.css"
 
 const List = ({people}) => {
+  
   return (
     <>
       {people.map((person)=>{

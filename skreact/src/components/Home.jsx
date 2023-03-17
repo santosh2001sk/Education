@@ -10,7 +10,7 @@ import {
   FaMedapps,
   FaStar
 } from "react-icons/fa";
-import { FcDatabase } from "react-icons/fc";
+// import { FcDatabase } from "react-icons/fc";
 // import Ceo from "./images/ceo.jpg";
 // import Takla from "./images/cfo.jpg";
 import "./Style.css";
@@ -264,6 +264,12 @@ const HOME = (props, { Children }) => {
             <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
               <FaStar className="text-slate-700" />
               REVIEW
+            </button>
+          </Link>
+          <Link to="/subjects">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaStar className="text-slate-700" />
+              SUBJECTS
             </button>
           </Link>
           <hr />

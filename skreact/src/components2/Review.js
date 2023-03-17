@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import people from './Data';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import "./Style2.css"
+import { Link } from 'react-router-dom';
 
 const Review = () => {
  const[index,setindex]=useState(0);
@@ -47,13 +48,15 @@ const Review = () => {
 <h4 className='author'>{name}</h4>
 <p className='job'>{job}</p>
 <p className='info'>{text}</p>
-<img src="/public/da.jpg" alt='rating' />
+<div className='flex'><img src="./images/star.webp" alt='rating' className='star'/></div>
+
 <div className='button-container'>
   <button className='prev-btn' onClick={prevPerson}><FaChevronLeft/></button>
   <button className='next-btn' onClick={nextPerson}><FaChevronRight/></button>
-</div> 
+</div>
  <button className='random-btn' onClick={randomPerson}>surprise me</button>
-
+ <Link to="/"><button type='button'>Back
+      </button></Link>
   </article>;
 };
 

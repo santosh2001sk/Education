@@ -17,6 +17,8 @@ import Training from "./components/Training.jsx"
 // import { FaGithubSquare } from 'react-icons/fa';
 import Review from './components2/Review';
 import Notify from './components1/Notify';
+import Front from './components3/Front';
+// import { FormControl } from "react-bootstrap";
 
 // import { AppContext } from "./components/Context.jsx";
 // import { useGlobalContext } from "./components/Context.jsx";
@@ -37,9 +39,8 @@ function App() {
         <Route path="/news" element={<News/>} />
         <Route path="/review" element={<Review/>} />
         <Route path="/notify" element={<Notify/>} />
-       
- 
-        {/* <Route path="/search" element={<Search/>}/>
+        <Route path="/subjects" element={<Front/>} />
+       {/* <Route path="/search" element={<Search/>}/>
         <Route path="/story" element={<Story/>}/>
         <Route path="/pagination" element={<Pagination/>}/> */}
         {/* <Route path="/context" element={<Context/>}/> */}
@@ -49,7 +50,7 @@ function App() {
       </Routes>
     </BrowserRouter>
 
-   
+
     </>
   );
 }
