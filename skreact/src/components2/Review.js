@@ -40,6 +40,7 @@ const Review = () => {
 
  }
 
+
   return <article className='review'>
   <div className='img-container'>
     <img src={image} alt={name} className="person-img" />

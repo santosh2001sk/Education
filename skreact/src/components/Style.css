@@ -539,6 +539,7 @@ li a {
 }
 .cfo:hover {
   height: 420px;
+  mask-image:rotate(45deg);
 }
 .cfo:hover > .content3 {
   opacity: 1;

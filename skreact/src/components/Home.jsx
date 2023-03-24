@@ -272,6 +272,12 @@ const HOME = (props, { Children }) => {
               SUBJECTS
             </button>
           </Link>
+          <Link to="/all">
+            <button className="mt-2  flex items-center justify-center gap-x-5 py-2 px-2 w-90 rounded-lg hover:bg-gray-300">
+              <FaStar className="text-slate-700" />
+              News
+            </button>
+          </Link>
           <hr />
 
           <br></br>

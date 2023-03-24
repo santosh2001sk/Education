@@ -41,7 +41,7 @@ function App() {
         <div className='underline'></div>
       </div>
       <section className='followers'>
-        <div className='container grid grid-cols-5 center'>
+        <div className='container '>
           {followers.map((follower) => {
             return <Follower key={follower.id} {...follower} />
           })}

@@ -18,6 +18,10 @@ import Training from "./components/Training.jsx"
 import Review from './components2/Review';
 import Notify from './components1/Notify';
 import Front from './components3/Front';
+
+import Combine from "./components4/Combine";
+import All from "./components5/All";
+
 // import { FormControl } from "react-bootstrap";
 
 // import { AppContext } from "./components/Context.jsx";
@@ -40,6 +44,10 @@ function App() {
         <Route path="/review" element={<Review/>} />
         <Route path="/notify" element={<Notify/>} />
         <Route path="/subjects" element={<Front/>} />
+        <Route path="/search" element={<Combine/>} />
+        <Route path="/all" element={<All/>} />
+
+      
        {/* <Route path="/search" element={<Search/>}/>
         <Route path="/story" element={<Story/>}/>
         <Route path="/pagination" element={<Pagination/>}/> */}
@@ -47,10 +55,10 @@ function App() {
         {/* <Search/>
         <Story/>
         <Pagination/> */}
+        
       </Routes>
     </BrowserRouter>
-
-
+   
     </>
   );
 }

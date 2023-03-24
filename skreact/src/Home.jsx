@@ -384,6 +384,7 @@ return (
           </address>
           <br/> <contact>
         <a href="https://duo.google.com">contact:9078740841</a></contact>
+        <progress></progress>
         </div>
         
       </div>
@@ -392,6 +393,7 @@ return (
   </section>
   {/* <Login/> */}
   
+  <progress></progress>
 </>
 
     </div>
